@@ -2,21 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { Error404Component } from './error-404/error-404.component';
 import { CourseModule } from './courses/course.module';
+import { CoreModule } from './core/core.module';
+import { Error404Component } from './core/component/error-404/error-404.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent,
-    Error404Component
+    AppComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    CoreModule,
     CourseModule,
     RouterModule.forRoot([      
       {
